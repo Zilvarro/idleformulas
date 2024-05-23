@@ -142,8 +142,8 @@ export default function OptionScreen({state, popup, updateState, setTotalClicks}
           description="Header Display" tooltip="Controls display at the top of the site"/>
       </p>}
       <p>
-        {spaces()}<MultiOptionButton settingName="numberFormat" statusList={["LETTER","SCIENTIFIC","AMBIGUOUS"]} state={state} updateState={updateState} setTotalClicks={setTotalClicks}
-          description="Number Format" tooltip="Controls how numbers are displayed" tooltipList={["Use letters for thousands: K,M,B,T,Q,P,S,V,O,N,D","Use scientific notation", "Use ambigous notation"]}/>
+        {spaces()}<MultiOptionButton settingName="numberFormat" statusList={["LETTER", "ORIGINAL LETTER","SCIENTIFIC","AMBIGUOUS"]} state={state} updateState={updateState} setTotalClicks={setTotalClicks}
+          description="Number Format" tooltip="Controls how numbers are displayed" tooltipList={["Use letters for thousands: K,M,B,T,Qa,Qi,Sx,Sp,O,N,D","Use the letters for thousands as in the original game fork: K,M,B,T,Q,P,S,V,O,N,D","Use scientific notation", "Use ambigous notation"]}/>
       </p><p>
         {spaces()}<MultiOptionButton settingName="shopPrices" statusList={["OFF","ON"]} state={state} updateState={updateState} setTotalClicks={setTotalClicks}
           description="Shop Price Labels" tooltip="Controls how formula prices and additional info are shown in Shop" tooltipList={["Shop Prices are only shown in Tooltips","Shop Prices are shown in Label."]}/>

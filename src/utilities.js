@@ -24,7 +24,11 @@ export const formatNumber = (number, numberFormat, decimals=0, smallfixed=false,
         const aNumberSplits = sNumberString.split("e+")
         var fMultiplier = parseFloat(aNumberSplits[0]) * 1.0000000001
         var iExponent = parseInt(aNumberSplits[1])
-        const aSymbols = ["","K","M","B","T","Q","P","S","V","O","N","D"]
+        if (numberFormat === "LETTER") {
+            const aSymbols = ["", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "O", "N", "D"]
+        } else {
+            const aSymbols = ["", "K", "M", "B", "T", "Q", "P", "S", "V", "O", "N", "D"]
+        }
         const aExtras = [1,10,100]
 
         let sSymbol
