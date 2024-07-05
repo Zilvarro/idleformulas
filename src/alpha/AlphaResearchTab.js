@@ -113,7 +113,7 @@ export default function AlphaResearchTab({state, updateState, setTotalClicks}) {
             <div>Total Level: {formatNumber(totalLevel, state.numberFormat, 2)}</div><br/><br/>
         </>}
 
-        Research speed is boosted by your highscores but higher levels take longer.
+        Research speed is boosted by your high scores but higher levels take longer.
         {getMaxxedResearchBonus(state).count > 0 && <><br/>Every maxxed Research Bar doubles your Formula Efficiency (x{getMaxxedResearchBonus(state).bonus}).</>}
         <br/><br/><AlphaResearchBar key="x" research={researchDictonary["x"]} state={state} updateState={updateState}/>
         <br/><br/><AlphaResearchBar key="x'" research={researchDictonary["x'"]} state={state} updateState={updateState}/>

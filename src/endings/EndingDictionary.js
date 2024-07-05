@@ -65,21 +65,21 @@ const evilActions = [
     {
         title: "ENHANCE WORLD FORMULA",
         durationSeconds: 10,
-        headerText: <>The World formula has absorbed enough evil energy to be enhanced!</>,
+        headerText: <>The World Formula has absorbed enough evil energy to be enhanced!</>,
     },
     {
         title: "ELIMINATE HALF OF POPULATION",
         durationSeconds: 5,
         split: 2,
         requirement: 7999999988,
-        headerText: <>The World formula is at maximum power!</>,
+        headerText: <>The World Formula is at maximum power!</>,
     },
     {
         title: "KILL A PERSON",
         progress: 1,
         durationSeconds: 10,
         requirement: 7999999999,
-        headerText: <>Your Hirees are dead! Even the World Formula is disgusted by your Actions and refuses to help.<br/><br/>You will have to finish this completely on your own.</>
+        headerText: <>Your hirees are dead! Even the World Formula is disgusted by your actions and refuses to help.<br/><br/>You will have to finish this completely on your own.</>
     },
     {
         title: "KILL A PERSON",
@@ -119,7 +119,7 @@ const goodActions = [
         headerText: <>The World Formula lets you achieve anything!</>,
     },
     {
-        title: "HELP AN ELDERLY",
+        title: "HELP AN ELDERLY PERSON",
         durationSeconds: 3,
     },
     {
@@ -180,14 +180,14 @@ const goodActions = [
     {
         title: "ENHANCE WORLD FORMULA",
         durationSeconds: 10,
-        headerText: <>The World formula has absorbed enough good energy to be enhanced!</>,
+        headerText: <>The World Formula has absorbed enough good energy to be enhanced!</>,
     },
     {
         title: "CURE HALF",
         durationSeconds: 5,
         requirement: 29988,
         split: 2,
-        headerText: <>The World formula is at maximum power!</>,
+        headerText: <>The World Formula is at maximum power!</>,
     },
     {
         title: "CURE AN ILLNESS",
@@ -283,14 +283,14 @@ const trueActions = [
     {
         title: "ENHANCE WORLD FORMULA",
         durationSeconds: 10,
-        headerText: <>The World formula has absorbed enough incremental energy to be enhanced!</>,
+        headerText: <>The World Formula has absorbed enough incremental energy to be enhanced!</>,
     },
     {
         title: "ADD ANOTHER E",
         durationSeconds: 1,
         repeat: 29,
         getValue: (r)=>("1" + ("e").repeat(r+3) + "5"),
-        headerText: <>The World formula is at maximum power!</>,
+        headerText: <>The World Formula is at maximum power!</>,
     },
     {
         title: "ROUND UP GENEROUSLY",
@@ -316,43 +316,43 @@ const trueActions = [
     {
         title: "TAKE A DEEP BREATH",
         durationSeconds: 10,
-        headerText: <>The World formula is at maximum power!<br/><br/>You found inner peace!</>,
+        headerText: <>The World Formula is at maximum power!<br/><br/>You found inner peace!</>,
     },
     {
         title: "FIND INNER PEACE",
         durationSeconds: 5,
-        headerText: <>The World formula is at maximum power!<br/><br/>You found inner peace!</>,
+        headerText: <>The World Formula is at maximum power!<br/><br/>You found inner peace!</>,
     },
     {
         title: "FIND INNER PEACE",
         durationSeconds: 5,
-        headerText: <>The World formula is at maximum power!<br/><br/>You found 2 inner peaces!</>,
+        headerText: <>The World Formula is at maximum power!<br/><br/>You found 2 inner peaces!</>,
     },
     {
         title: "FIND INNER PEACE",
         durationSeconds: 5,
-        headerText: <>The World formula is at maximum power!<br/><br/>You found 3 inner peaces!</>,
+        headerText: <>The World Formula is at maximum power!<br/><br/>You found 3 inner peaces!</>,
     },
     {
         title: "FIND INNER PEACE",
         durationSeconds: 5,
-        headerText: <>The World formula is at maximum power!<br/><br/>You found 4 inner peaces!</>,
+        headerText: <>The World Formula is at maximum power!<br/><br/>You found 4 inner peaces!</>,
     },
     {
         title: "FIND INNER PEACE",
         durationSeconds: 5,
-        headerText: <>The World formula is at maximum power!<br/><br/>You found 5 inner peaces!</>,
+        headerText: <>The World Formula is at maximum power!<br/><br/>You found 5 inner peaces!</>,
     },
     {
-        title: "PEACE THE PEACES TOGETHER",
+        title: "PIECE THE PEACES TOGETHER",
         durationSeconds: 5,
-        headerText: <>The World formula is at maximum power!<br/><br/>You found 6 inner peaces!</>,
+        headerText: <>The World Formula is at maximum power!<br/><br/>You found 6 inner peaces!</>,
     },
     {
         title: "PREPARE TO MOVE ON",
         getValue: ()=>0,
         durationSeconds: 30,
-        headerText: <>The World formula is at maximum power!<br/><br/>You solved the peace puzzle!</>,
+        headerText: <>The World Formula is at maximum power!<br/><br/>You solved the peace puzzle!</>,
     },
     {
         title: "MOVE ON",
@@ -474,7 +474,7 @@ export const endingList = {
         headerText: <>~Skipped Ending~</>,
         quoteText: <>&ldquo;With great power comes great responsibility.&rdquo;</>,
         teaseHeaderText: <>~??????? ??????~</>,
-        storyText: <>Who cares about the story anyway.<br/>You just finished World Formula Any%!</>,
+        storyText: <>Who cares about the story anyway?<br/>You just finished World Formula Any%!</>,
         final:true,
         endingName:"skipped",
         instaDestiny:true,

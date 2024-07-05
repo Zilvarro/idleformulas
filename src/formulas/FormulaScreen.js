@@ -58,7 +58,7 @@ export const shopFormulas=[
 export default function FormulaScreen({state, updateState, setTotalClicks, popup}) {
     const resetXValues = ()=>{
       const isProgressAvailable = state.xValue[0] >= nextUnlockCost || state.xValue[0] >= differentialTarget || state.xValue[0] >= alphaTarget
-      popup.confirm("Your X values are reset, but you can change your equipped formulas.",()=>{
+      popup.confirm("Your x values are reset, but you can change your equipped formulas.",()=>{
         popup.confirm("Your x is high enough to unlock something or progress instead. Do you still want to do a Basic Research?",()=>{
           updateState({name: "resetXValues"})
           setTotalClicks((x)=>x+1)
@@ -92,7 +92,7 @@ export default function FormulaScreen({state, updateState, setTotalClicks, popup
     }
 
     const negativeSpaceInfo = ()=>{
-      popup.alert(<>When an X-Value becomes negative, you enter Negative Space.<br/>While in Negative Space: x-Resets, Alpha-Resets and Challenge Completions are disabled.<br/>You can leave Negative Space by doing a Basic Reset or aborting your run.</>)
+      popup.alert(<>When an x value becomes negative, you enter Negative Space.<br/>While in Negative Space: x-Resets, Alpha-Resets and Challenge Completions are disabled.<br/>You can leave Negative Space by doing a Basic Reset or aborting your run.</>)
     }
 
     const completeChallenge = ()=>{
@@ -179,7 +179,7 @@ export default function FormulaScreen({state, updateState, setTotalClicks, popup
 
     return (<div style={{color: "#99FF99", marginLeft: "10px"}}>
         <div className="row" style={{marginTop:"0px"}}><div className="column">
-        <h2 style={{marginTop:"0px"}}>X Values</h2>
+        <h2 style={{marginTop:"0px"}}>x values</h2>
             <ValueTable values={state.xValue} diffs={state.avgXPerSecond} baseName={"x"} maxTier={state.highestXTier} numberFormat={state.settings.numberFormat}/>
             <br/>
             {!state.insideChallenge && state.xValue[0] >= Infinity ?
@@ -205,7 +205,7 @@ export default function FormulaScreen({state, updateState, setTotalClicks, popup
           <h2>My Formulas</h2>
           <FormulaTable state={state} updateState={updateState} popup={popup} setTotalClicks={setTotalClicks} formulaNames={inventoryFormulas} context="my"/>
           {state.progressionLayer === 0 && state.formulaUnlockCount >= 2 && state.highestXTier === 0 && 
-            <p>Hint: Apply formulas repeatedly by holding the button or using the 1/2/3-Keys.</p>
+            <p>Hint: Apply formulas repeatedly by holding the button or using the 1/2/3 keys.</p>
           }
           <p>
             {(state.alphaUpgrades.MEEQ) && <>
@@ -241,8 +241,8 @@ export default function FormulaScreen({state, updateState, setTotalClicks, popup
             {state.activeChallenges.LIMITED && <p>You can apply {100 - state.formulaApplyCount} more formulas.</p>}
             {(state.xResetCount > 0 || state.highestXTier > 0 || state.progressionLayer > 0) && state.highestXTier < 3 && state.xValue[0] < differentialTarget && <p>Reach x={formatNumber(differentialTarget, state.settings.numberFormat)} for the next x-Reset</p>}
             {(state.xResetCount > 0 || state.highestXTier > 0) && state.progressionLayer === 0 && state.highestXTier < 3 && state.xValue[0] >= differentialTarget && <p style={{color:"#00FF00", fontWeight:"bold"}}>{sResetName}-Reset is now available! (See button above!)</p>}
-            {state.progressionLayer > 0 && !state.insideChallenge && !state.inNegativeSpace && state.xValue[0] > differentialTarget && <p>{sResetName}-Reset Highscore: x={formatNumber(state.xHighScores[state.highestXTier], state.settings.numberFormat,3)}</p>}
-            {state.activeChallenges.FORMULAGOD && <p>Formula God Highscore: x={formatNumber(state.formulaGodScores[0], state.settings.numberFormat,3)}</p>}
+            {state.progressionLayer > 0 && !state.insideChallenge && !state.inNegativeSpace && state.xValue[0] > differentialTarget && <p>{sResetName}-Reset High Score: x={formatNumber(state.xHighScores[state.highestXTier], state.settings.numberFormat,3)}</p>}
+            {state.activeChallenges.FORMULAGOD && <p>Formula God High Score: x={formatNumber(state.formulaGodScores[0], state.settings.numberFormat,3)}</p>}
             {state.progressionLayer >= 1 && state.highestXTier === 3 && state.xValue[0] < alphaTarget && !state.insideChallenge && <p>Reach x={formatNumber(alphaTarget, state.settings.numberFormat)} to perform an &alpha;-Reset</p>}
             {state.highestXTier === 3 && state.xValue[0] < alphaTarget && state.insideChallenge && <p>Reach x={formatNumber(alphaTarget,state.settings.numberFormat)} to complete the challenge</p>}
             {state.progressionLayer >= 1 && state.highestXTier === 3 && !state.inNegativeSpace && !state.insideChallenge && state.xValue[0] >= alphaTarget && <p>Alpha Reset for {alphaRewardTier.alpha * Math.pow(2,state.baseAlphaLevel)} &alpha;.{alphaRewardTier.next && <>&nbsp;(Next: {alphaRewardTier.nextAlpha * Math.pow(2,state.baseAlphaLevel)} &alpha; at x={formatNumber(alphaRewardTier.next)})</>}</p>}

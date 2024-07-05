@@ -18,7 +18,7 @@ export const alphaChallengeDictionary = {
     "DECREASE": {
         id:"DECREASE",
         title:"Decay",
-        description:"All X-Values decay at a rate of 10% per second, rounded up.",
+        description:"All x values decay at a rate of 10% per second, rounded up.",
     },
     "LIMITED": {
         id:"LIMITED",
@@ -28,7 +28,7 @@ export const alphaChallengeDictionary = {
     "RESETOTHER": {
         id:"RESETOTHER",
         title:"Selfish",
-        description:"Applying a formula resets all other X-Values.",
+        description:"Applying a formula resets all other x values.",
     },
     "NEWONLY": {
         id:"NEWONLY",
@@ -92,10 +92,21 @@ export default function AlphaChallengeTab({state, updateState, popup}) {
 
     const challengeBonus = getChallengeBonus(state)
 
+    //allow "Your {challengeBonus.full} challenge completions and {challengeBonus.segment} segment completions" to be
+    //grammatically correct no matter the count of completions
+    let challengeCompletions = "completions"
+    let segmentCompletions = "completions"
+    if(challengeBonus.full === 1)  {
+        challengeCompletions = "completion"
+    }
+    if(challengeBonus.segment === 1) {
+        segmentCompletions = "completion"
+    }
+
     return (<div style={{marginLeft:"20px"}}>
         <h2>Challenges</h2>
-        Challenges are like normal Alpha-Runs, but with additional constraints.<br/> You are rewarded for each successful x-Reset and for completing the entire run!<br/>
-        {challengeBonus.full === 13 ? <>You completed all challenges, boosting your Formula Efficiency by {challengeBonus.bonus.toFixed(2)}.</>: <>Your {challengeBonus.full} challenge completions and {challengeBonus.segment} segment completions boost your Formula Efficiency by {challengeBonus.bonus.toFixed(2)}.</>}
+        Challenges are like normal Alpha Runs, but with additional constraints.<br/> You are rewarded for each successful x-Reset and for completing the entire run!<br/>
+        {challengeBonus.full === 13 ? <>You completed all challenges, boosting your Formula Efficiency by {challengeBonus.bonus.toFixed(2)}.</>: <>Your {challengeBonus.full} challenge {challengeCompletions} and {challengeBonus.segment} segment {segmentCompletions} boost your Formula Efficiency by {challengeBonus.bonus.toFixed(2)}.</>}
         {state.currentChallenge && <p>You are currently in the "{state.currentChallengeName}" Challenge.</p>}
         <p>
             <button style={{color:"black"}} disabled={!state.insideChallenge} onClick={exitAlphaChallenge}>Exit Challenge</button>

@@ -21,7 +21,7 @@ export const mailDictionary = {
     "What":{
         id: "What",
         title: "Re: What are you talking about?",
-        content: <>I noticed how obsessed you were lately with researching formulas and large numbers, so I was sure you must have heard about it. About the mythical formula that is said to transcend maths itself. I've spent years following traces, not even sure why it is important or what my ultimate goal is. My curiousity led me deeper and deeper into the rabbit hole, but it was all in vain. Save yourself the trouble and stop digging deeper.</>,
+        content: <>I noticed how obsessed you were lately with researching formulas and large numbers, so I was sure you must have heard about it. About the mythical formula that is said to transcend maths itself. I've spent years following traces, not even sure why it is important or what my ultimate goal is. My curiosity led me deeper and deeper into the rabbit hole, but it was all in vain. Save yourself the trouble and stop digging deeper.</>,
         responses: [<>What did you find out so far?</>, <>Yeah, I'd rather not get involved in this.</>],
         sender: "Mister Y",
         check: (state)=>(state.xValue[0] > 520e6 && state.highestXTier >= 1),
@@ -68,7 +68,7 @@ export const mailDictionary = {
     "Joined":{
         id: "Joined",
         title: "About the Academy",
-        content: <>So you've joined the Academy to aid your goals? They can be very helpful and you will need all help you can get. But be careful, you must not let them know you are looking for the world formula. We don't want the Academy to steal the fruits of our endeavors.</>,
+        content: <>So you've joined the Academy to aid your goals? They can be very helpful and you will need all help you can get. But be careful, you must not let them know you are looking for the World Formula. We don't want the Academy to steal the fruits of our endeavors.</>,
         sender: "Mister Y",
         check: (state)=>(state.progressionLayer >= 1 && state.xValue[0] > 300e6 && state.highestXTier >=3),
         delay: 30,
@@ -77,7 +77,7 @@ export const mailDictionary = {
     "How":{
         id: "How",
         title: "But how???",
-        content: <>Hearing about the world formula, you may be wondering how to achieve such a state of mind, how to <i>discover</i> the World Formula for yourself. One must break out of the prison imposed by ones formulas. Find unlimited growth. Yearn for <b>Infinity</b>. Yet one must not just invent new formulas, instead one must <b>exploit the core of mathematics</b> to break free of the bounds which constrain ones conciousness. And those who get blinded by greed and stop being careful may end up stuck with infinitely many problems, or deep down in the depths of hell.</>,
+        content: <>Hearing about the World Formula, you may be wondering how to achieve such a state of mind, how to <i>discover</i> the World Formula for yourself. One must break out of the prison imposed by one's formulas. Find unlimited growth. Yearn for <b>Infinity</b>. Yet one must not just invent new formulas, instead one must <b>exploit the core of mathematics</b> to break free of the bounds which constrain one's consciousness. And those who get blinded by greed and stop being careful may end up stuck with infinitely many problems, or deep down in the depths of hell.</>,
         sender: "Mister Y",
         check: (state)=>(state.alpha >= 42),
         delay: 500,
@@ -341,7 +341,7 @@ export const mailDictionary = {
     "Research":{
         id: "Research",
         title: "Research",
-        content: <>As a part of our Academy, you may now use our institutions for Research. You find Research on the Alpha tab. For Research it is important to not do your x-Resets immediately, but instead aim for a better highscore. The speed of your research is directly proportional to your highscores. If a highscore gets very much ahead of a Research level, you can even claim multiple levels at once! Research may not seem to help much when you first start, but its benefits grow exponentially, and they will soon speed up your daily work greatly.</>,
+        content: <>As a part of our Academy, you may now use our institutions for Research. You find Research on the Alpha tab. For Research it is important to not do your x-Resets immediately, but instead aim for a better high score. The speed of your research is directly proportional to your high scores. If a high score gets very much ahead of a Research level, you can even claim multiple levels at once! Research may not seem to help much when you first start, but its benefits grow exponentially, and they will soon speed up your daily work greatly.</>,
         responses: [<>UNLOCK RESEARCH</>],
         sender: "Academy",
         check: (state)=>(state.alphaUpgrades.SLOT || state.alphaUpgrades.AAPP || state.alphaUpgrades.AUNL),
@@ -351,7 +351,7 @@ export const mailDictionary = {
     "Challenges":{
         id: "Challenges",
         title: "Academy Projects",
-        content: <>We are very happy with the results of your Research so far. As such we would like to invite you to participate in more complex projects. Sometimes true wisdom can only be achieved by restricting ones options, forcing one to assume new perspectives. On the Alpha tab you can find our projects under Challenges. Every Challenge and Challenge segment you clear will allow us to make your formulas more efficient. And once you have proven yourself, there will be special rewards if you can help with the toughest Challenges our Academy faces right now.</>,
+        content: <>We are very happy with the results of your Research so far. As such we would like to invite you to participate in more complex projects. Sometimes true wisdom can only be achieved by restricting one's options, forcing one to assume new perspectives. On the Alpha tab you can find our projects under Challenges. Every Challenge and Challenge segment you clear will allow us to make your formulas more efficient. And once you have proven yourself, there will be special rewards if you can help with the toughest Challenges our Academy faces right now.</>,
         responses: [<>UNLOCK CHALLENGES</>],
         sender: "Academy",
         check: (state)=>(state.researchLevel["x"] >= 100 && state.researchLevel["x'"] >= 100 && state.researchLevel["x''"] >= 100 && state.researchLevel["x'''"] >= 100),
@@ -391,7 +391,7 @@ export const mailDictionary = {
     "Idle":{
         id: "Idle",
         title: "Master of Idle",
-        content: <>Congratulations on finishing the Master of Idle Challenge. We improved your Passive Alpha gain, from now on you will get Alpha based on your best fully idle Alpha run. You can check it on the Alpha upgrades tab.</>,
+        content: <>Congratulations on finishing the Master of Idle Challenge. We improved your Passive Alpha gain, from now on you will get Alpha based on your best fully idle Alpha Run. You can check it on the Alpha upgrades tab.</>,
         sender: "Academy",
         check: (state)=>(state.clearedChallenges["FULLYIDLE"]),
         delay: 90,
@@ -399,7 +399,7 @@ export const mailDictionary = {
     "God":{
         id: "God",
         title: "Formula God",
-        content: <>Thank you for attempting the Formula God Challenge. That one is truly giving us nightmares. However, we are able to support you by multiplying your research speeds by your respective best scores in the Formula God Challenge. You can check this special boost on the Research tab. Keep trying and improving those highscores!</>,
+        content: <>Thank you for attempting the Formula God Challenge. That one is truly giving us nightmares. However, we are able to support you by multiplying your research speeds by your respective best scores in the Formula God Challenge. You can check this special boost on the Research tab. Keep trying and improving those high scores!</>,
         sender: "Academy",
         check: (state)=>(state.formulaGodScores[0] > 1),
         delay: 45
@@ -426,7 +426,7 @@ export const mailDictionary = {
     "TrueHint":{
         id: "TrueHint",
         title: "We have an idea for those Stones.",
-        content: <>Sorry for taking so long, we went down the wrong path for a while: Your starting x now allows you to get the three differentials without using any formulas. But that does not really seem to help you do anything new. Then, upon closer inspection we noticed that with your Starting X it should now be possible to use x''' &#10141; x''' + log<sub>2</sub>(x)<sup>2</sup> as your first formula. Curiously, if one was to apply that formula while x = Infinity, then one could also reach x''' = Infinity.</>,
+        content: <>Sorry for taking so long, we went down the wrong path for a while: Your starting x now allows you to get the three differentials without using any formulas. But that does not really seem to help you do anything new. Then, upon closer inspection we noticed that with your starting x it should now be possible to use x''' &#10141; x''' + log<sub>2</sub>(x)<sup>2</sup> as your first formula. Curiously, if one was to apply that formula while x = Infinity, then one could also reach x''' = Infinity.</>,
         check: (state)=>(true),
         abandon: (state)=>(state.mailsReceived["NoHint"]),
         delay: 30000,
@@ -446,7 +446,7 @@ export const mailDictionary = {
     "Destiny":{
         id: "Destiny",
         title: "Fight the Darkness with me",
-        content: <>Hello, congratulations on finishing the main game! You now have gained access to my realm. My name is Estelle, the goddess of Starlight and sleepless overseer of the eternal night. Sadly, during the last weeks, the night sky has darkened drastically. It became almost devoid of Stars and Starlight. I could really use your help to restore as much of that as possible. Since this is optional post-game content, you can do as little or much of it as you want without really missing out on anything important. But every ray of Starlight counts and helps me! <br/><br/>Here is a quick overview:<br/><br/>Astral Glance: Produces 1 Starlight per Second<br/><br/>Shooting Star: Doubles Starlight Rate<br/><br/>Luminous Moon: Multiplies Starlight Rate with number of Destiny Stars<br/><br/>Gaze at the night sky: Grants 1 Starlight, only possible if there is no other means of generating Starlight<br/><br/>Destiny Reset: Resets the entire main game ("New Game Plus") for a Destiny Star. Only available when the main game is completed.<br/><br/>Destiny Star: The number of Destiny Stars acts as a global multiplier for many aspects of the main game. And, as mentioned before, Destiny Stars boost the effect of Luminous Moons.<br/><br/>Star Constellations: There is a legend that, when the night sky is full of Starlight, all of it can be transformed into a beautiful Star Constellation!</>,
+        content: <>Hello, congratulations on finishing the main game! You now have gained access to my realm. My name is Estelle, the goddess of Starlight and sleepless overseer of the eternal night. Sadly, during the last weeks, the night sky has darkened drastically. It became almost devoid of Stars and Starlight. I could really use your help to restore as much of that as possible. Since this is optional post-game content, you can do as little or much of it as you want without really missing out on anything important. But every ray of Starlight counts and helps me! <br/><br/>Here is a quick overview:<br/><br/>Astral Glance: Produces 1 Starlight per Second<br/><br/>Shooting Star: Doubles Starlight Rate<br/><br/>Luminous Moon: Multiplies Starlight Rate with number of Destiny Stars<br/><br/>Gaze at the night sky: Grants 1 Starlight, only possible if there are no other means of generating Starlight<br/><br/>Destiny Reset: Resets the entire main game ("New Game Plus") for a Destiny Star. Only available when the main game is completed.<br/><br/>Destiny Star: The number of Destiny Stars acts as a global multiplier for many aspects of the main game. And, as mentioned before, Destiny Stars boost the effect of Luminous Moons.<br/><br/>Star Constellations: There is a legend that, when the night sky is full of Starlight, all of it can be transformed into a beautiful Star Constellation!</>,
         sender: "Estelle",
         check: (state)=>(state.destinyStars >= 1),
         delay: 0,
@@ -476,7 +476,7 @@ export const mailDictionary = {
     "Eternal":{
         id: "Eternal",
         title: "The eternal night is over",
-        content: <>This is absolutely incredible. With an Infinity of Starlight, replenishing itself quickly should darkness ever arise again, the eternal night is finally coming to an end, and the Age of Illumination is about to begin. However, the dawn of this new era means that it is time for us to part ways. And that it is time for me to get some rest. But I will hold to the memories of our time together dearly, and take them with me, whereever fate may take me!<br/><br/>Farewell, and thank you for everything!<br/><br/>Estelle</>,
+        content: <>This is absolutely incredible. With an Infinity of Starlight, replenishing itself quickly should darkness ever arise again, the eternal night is finally coming to an end, and the Age of Illumination is about to begin. However, the dawn of this new era means that it is time for us to part ways. And that it is time for me to get some rest. But I will hold to the memories of our time together dearly, and take them with me, wherever fate may take me!<br/><br/>Farewell, and thank you for everything!<br/><br/>Estelle</>,
         sender: "Estelle",
         check: (state)=>(state.starlightRecordMillis <= 120000 && state.starLight >= Infinity && state.lightAdder >= 1000 && state.lightDoubler >= 1000 && state.lightRaiser >= 1000),
         delay: 0,

@@ -172,7 +172,7 @@ export default function OptionScreen({state, popup, updateState, setTotalClicks}
         {spaces()}<button onClick={cheat}>Cheat</button>
       </p>}
       <details>
-        <summary>Pop-Up-Settings</summary>
+        <summary>Pop-Up Settings</summary>
         <p>
           {spaces()}<MultiOptionButton settingName="offlineProgressPopup" statusList={["ON","LAUNCH","OFF"]} state={state} updateState={updateState} setTotalClicks={setTotalClicks}
             description="Offline Progress Pop-Up" tooltip="Controls whether the offline progress popup is shown" tooltipList={["Shown at launch and after inactive periods","Only shown at launch/loading", "Never shown"]}/>
@@ -183,7 +183,7 @@ export default function OptionScreen({state, popup, updateState, setTotalClicks}
         </p> */}
         <p>
         {spaces()}<MultiOptionButton settingName="valueReduction" statusList={["ON","OFF"]} state={state} updateState={updateState} setTotalClicks={setTotalClicks}
-          description="Decreasing Formula Pop-Up" tooltip="Controls whether the confirmation popup for decreasing an X-Value is shown" tooltipList={["Show popup","Do not show popup"]}/>
+          description="Decreasing Formula Pop-Up" tooltip="Controls whether the confirmation popup for decreasing an x value is shown" tooltipList={["Show popup","Do not show popup"]}/>
         </p>
         <p>
           {spaces()}<MultiOptionButton settingName="xResetPopup" statusList={["ON","OFF","SMART","SAFE"]} state={state} updateState={updateState} setTotalClicks={setTotalClicks}
@@ -199,7 +199,7 @@ export default function OptionScreen({state, popup, updateState, setTotalClicks}
         </p>}
         {(state.destinyStars > 1 || state.progressionLayer > 0) && <p>
           {spaces()}<MultiOptionButton settingName="alphaAbortPopup" statusList={["DOUBLE", "ON","OFF"]} state={state} updateState={updateState} setTotalClicks={setTotalClicks}
-            description="Abort Alpha Pop-Up" tooltip="Controls whether the confirmation popup for aborting an Alpha run is shown" tooltipList={["Show two popups", "Show one popup","Do not show popup"]}/>
+            description="Abort Alpha Pop-Up" tooltip="Controls whether the confirmation popup for aborting an Alpha Run is shown" tooltipList={["Show two popups", "Show one popup","Do not show popup"]}/>
         </p>}
         {(state.destinyStars > 1 || state.progressionLayer > 0) && <p>
           {spaces()}<MultiOptionButton settingName="alphaUpgradePopup" statusList={["ON","OFF"]} state={state} updateState={updateState} setTotalClicks={setTotalClicks}
@@ -216,7 +216,7 @@ export default function OptionScreen({state, popup, updateState, setTotalClicks}
       </details>
       <br/>
       <details>
-        <summary>Hotkey-Settings</summary>
+        <summary>Hotkey Settings</summary>
         <p>
           {spaces()}<MultiOptionButton settingName="hotkeyApplyFormula" statusList={["ON","OFF"]} state={state} updateState={updateState} setTotalClicks={setTotalClicks}
             description="Apply Formula Hotkeys [1/2/3]" tooltip="Controls whether number keys can be used to apply formulas" tooltipList={["Hotkeys Enabled", "Hotkeys Disabled"]}/>

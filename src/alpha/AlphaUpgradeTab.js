@@ -124,8 +124,8 @@ return (
         <br/><br/>
         <h2>Info</h2>
         <p>You have {formatNumber(state.alpha, state.settings.numberFormat,2)} Alpha Token{state.alpha !== 1 && "s"}!</p>
-        <p>Time in current Alpha run: {secondsToHms(state.currentAlphaTime / 1000)}{state.isFullyIdle && <> (Fully Idle)</>}</p>
-        {state.bestAlphaTime<1e50 && <p>Fastest Alpha run: {secondsToHms(state.bestAlphaTime / 1000, true)}</p>}
+        <p>Time in current Alpha Run: {secondsToHms(state.currentAlphaTime / 1000)}{state.isFullyIdle && <> (Fully Idle)</>}</p>
+        {state.bestAlphaTime<1e50 && <p>Fastest Alpha Run: {secondsToHms(state.bestAlphaTime / 1000, true)}</p>}
         {state.clearedChallenges.FULLYIDLE && <>
             <p>Best Fully Idle: {formatNumber(state.bestIdleTimeAlpha, state.settings.numberFormat, 2)}&alpha; in {secondsToHms(state.bestIdleTime  / 1000, true)}</p>
         </>}
