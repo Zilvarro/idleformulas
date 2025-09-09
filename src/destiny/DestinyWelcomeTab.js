@@ -124,7 +124,7 @@ export default function DestinyWelcomeTab({state, popup, updateState}) {
                     {getStarLightRate(state) === 0 && state.starLight < adderCost && <><DestinyStarlightButton upgrade={starlightDictionary["single"]} state={state} updateState={updateState} popup={popup}/><br/></>}
                     {state.lightRaiser > 0 && state.destinyStars <= 1 && <b>!!! Luminous Moons do nothing unless &#9733; &ge; 2 !!!<br/></b>}
                     {(state.starLight === Infinity || state.starLightInfiniteResetCount > 0) && <><button onClick={resetStarlight} disabled={state.starLight !== Infinity} title="Reset Starlight and Starlight Upgrades">Reset Starlight</button>&nbsp;&nbsp;
-                        {state.starLight !== Infinity && <>Need: &lambda;=Infinity</>}
+                        {state.starLight !== Infinity && <>Need: &lambda;=Infinity&nbsp;&nbsp;</>}
                         {state.starLightInfiniteResetCount === 0 && <>Unlocks Auto Astral Glances!</>}
                         {state.starLightInfiniteResetCount === 1 && <>Unlocks Auto Shooting Stars!</>}
                         {state.starLightInfiniteResetCount === 2 && <>Unlocks Auto Luminous Moons!</>}
